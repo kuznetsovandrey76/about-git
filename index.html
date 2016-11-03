@@ -3,45 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Work with Git</title>
-	<link rel="stylesheet" href="style.css">
-	<style>
-		body {
-			background-color: lightblue;			
-		}
-		code {
-			color: green;
-			background-color: white;
-			padding: 0 5px;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">	
 </head>
 <body>
-	<a href="https://git-scm.com/book/en/v2">The book. Pro Git</a> - Книженция про Git, не читал<br>
-	<a href="https://git-scm.com/">Download Git</a> - Загрузка программы на ПК (в Ubuntu работаем через terminal) 
-	
 	<p>Open GitBash<br>
 	Во время первого захода сразу задаем конфигурации<br>	
-	<code>git config --global user.name "Andrey Kuznetsov" || "kuznetsovandrey76"</code><br>
-	<code>git config --global user.email "and.rey.q@yandex.ru"</code></p>
+	<code>git config --global user.name "User Name"</code><br>
+	<code>git config --global user.email "user@email.ru"</code></p>
 
 	<p>All setting <code>git config --list</code></p>
 
 	Создание нового репозитория:
-	Импорт с ПК
 	<ol>
-		<li>Заходим в папку с файлами сайта (расположенных на нашем ПК): 
-		<code>cd c:/project/<span style="color: red;">наименование-папки</span></code></li>
-		<li><code>git init</code> - инициализация пустого/не пустого репозитория</li>
+		<li class="article">Main</li>
+		<li>Заходим в папку с файлами сайта (на нашем ПК): <code>cd c:/project/<span style="color: red;">folder</span></code></li>
+		<li><code>git init</code> - инициализация репозитория</li>
 		<li><code>git status</code> - запросить статус файлов</li>
 		<li><code>git add .</code> - добавляем файлы</li>
 		<li><code>git commit -m "comment"</code> - добавляем текущий "снимок"</li>
-		<li>При создании нового репозитория в gitHub смотрим на раздел:<br>…or push an existing repository from the command line</li>
-		<li>
+		<li><code>git commit -a -m "comment"</code> - добавление последующих "снимок" без команды "git add"</li>
 		<!-- Вводим команду в GitBash -->
+		<li class="article">Push</li>		
 		<code>git remote add origin https://github.com/kuznetsovandrey76/<span style="color: red;">название-репозитория</span>.git</code> - привязываем репозиторий с git'a</li>
 		<!-- Заливаем на gitHub -->
-		<li><code>git push -u origin master</code> - после этой команды файлы переходят git</li>
-
+		<li><code>git push -u origin master</code> - после этой команды файлы переходят на github</li>
+		<li><code>git push</code> - последующий перенос на github</li>
+		<li class="article">Branch</li>
+		<li><code>git branch <span style="color: red;">new-name-branch</span></code> - создание ветки без перехода в нее</li>
+		<li><code>git checkout -b <span style="color: red;">new-name-branch</span></code> - создание ветки с переходом в нее</li>
+		<li><code>git checkout <span style="color: red;">name-of-branch</span></code> - переключение между ветками</li>
+		
 	</ol>
 </body>
 </html>
