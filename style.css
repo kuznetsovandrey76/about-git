@@ -12,6 +12,7 @@ code {
 	color: green;
 	background-color: white;
 	padding: 0 5px;
+	margin: 0 5px;
 }
 li {
 	list-style-type: none;
